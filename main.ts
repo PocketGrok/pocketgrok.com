@@ -11,5 +11,9 @@ Deno.serve((request) => {
     return Response.redirect(url);
   }
 
+  if (url.pathname === "/") {
+    return new Response(`Hi, I'm Pocket!`);
+  }
+
   return new Response(undefined, { status: 404 });
 });
