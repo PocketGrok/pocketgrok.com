@@ -7,7 +7,8 @@ Deno.serve((request) => {
   // - <https://masto.host/mastodon-usernames-different-from-the-domain-used-for-installation/>
   if (url.pathname === "/.well-known/webfinger") {
     url.host = `mastodon.${url.host}`;
-    Response.redirect(url);
+    console.log(`Redirect WebFinger request <${request.url}> to <${url}>`);
+    return Response.redirect(url);
   }
 
   return new Response(undefined, { status: 404 });
