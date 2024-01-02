@@ -3,11 +3,31 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light">
     <title>PocketGrok</title>
     <style>
+      :root {
+        color-scheme: light dark;
+        --background-color: #fafafa;
+        --text-color: #444;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background-color: #121212;
+          --text-color: #eee;
+        }
+      }
       body {
         font-family: system-ui, sans-serif;
+        color: var(--text-color);
+        background: var(--background-color);
       }
+      a { color: #82a6c6; }
+      /* a:link {} */
+      /* a:visited {} */
+      /* a:hover {} */
+      /* a:active {} */
+      /* a:focus {} */
     </style>
   </head>
   <body>
