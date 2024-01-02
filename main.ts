@@ -12,7 +12,7 @@ Deno.serve((request) => {
   }
 
   if (url.pathname === "/") {
-    return new Response(`Hi, I'm Pocket!`);
+    return Deno.open("./home.html").then((file) => new Response(file.readable));
   }
 
   return new Response(undefined, { status: 404 });

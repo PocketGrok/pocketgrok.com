@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "dev": "deno run --watch --allow-net main.ts"
+    "dev": "deno run --watch --allow-net --allow-read=. main.ts"
   },
   "deploy": {
     "project": "52525366-9e8f-4fd1-9a65-630536dabd00",
